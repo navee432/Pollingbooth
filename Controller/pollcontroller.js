@@ -46,7 +46,7 @@ exports.update = async (req,res,next)=>{
         if(total_votes) updatedObject.total_votes = total_votes;
         if(comments) updatedObject.comments = comments;
         if(reply) updatedObject.reply = reply;
-        if(total_Comments) updatedObject.total_Comments = total_Comments;
+        // if(total_Comments) updatedObject.total_Comments = total_Comments;
         const updatedRecord = await SampleModel.findByIdAndUpdate(id,updatedObject, {new:true});
 
         if(!updatedRecord){

@@ -17,14 +17,14 @@ const sampleSchema = new Schema({
     total_likes:{type:Number},
     votes:{type:Number},
     total_votes:{type:Number},
-    comments:[
-        {user_id:{type:String}},
-        {comment:[{String}]},
-        {likes:[{user_id:String}]},
-        {total_likes:[{Number}]},
-        {reply:[{user_id:String}]}
-    ],
-    total_comments:{type:Number},
+    // comments:[
+    //     {user_id:{type:String}},
+    //     {comment:[{String}]},
+    //     {likes:[{user_id:String}]},
+    //     {total_likes:[{Number}]},
+    //     {reply:[{user_id:String}]}
+    // ],/////////////////////////////////////Because we use seperate comments collection
+ total_comments:{type:Number},
   
 
 }) 

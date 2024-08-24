@@ -14,3 +14,8 @@ HTTP_SERVER.listen(PORT, ()=>{
 })
 
 HTTP_SERVER.use('/', require('./app'));
+
+HTTP_SERVER.use('/',(req,res)=>{
+    res.send('Node Server is running')
+})
+

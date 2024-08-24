@@ -7,7 +7,7 @@ const {create,getall,update,getbyid,remove} = require('../Controller/commentscon
 router.post('/create',create);
 router.get('/getall',getall);
 router.post('/update/:id',update);
-router.get('/getbyid',getbyid);
-router.post('/remove',remove);
+router.get('/getby/:id',getbyid);
+router.post('/remove/:id',remove);
 
 module.exports = router;
