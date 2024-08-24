@@ -15,8 +15,7 @@ HTTP_SERVER.listen(PORT, ()=>{
 
 HTTP_SERVER.use('/', require('./app'));
 
-//Kumaresan branch
+HTTP_SERVER.use('/',(req,res)=>{
+    res.send('Node Server is running')
+})
 
-//Kumaresan branch check 2
-
-///login and sign up page

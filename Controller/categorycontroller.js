@@ -1,4 +1,4 @@
-const SampleModel = require('../Model/categorymodel');
+const SampleModel = require('../Model/commentsmodel');
 
 exports.create = async(req,res,next)=>{
     try
@@ -76,3 +76,4 @@ exports.remove = async(req,res)=>{
         return res.status(400).json({message:err.message});
     }    
 }
+

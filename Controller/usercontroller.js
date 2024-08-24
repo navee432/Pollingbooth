@@ -59,7 +59,7 @@ exports.getbyid = async(req,res)=>{
     try{
     const {id} = req.params;
 
-    const data = await SampleModel.findById(id);//find({phoneNo:phno,password:password})
+    const data = await SampleModel.findById(id);
     return res.status(200).json({data});       
 
     }
@@ -95,7 +95,7 @@ exports.signup = async(req,res,next)=>{
     }
     catch(err)
     {
-    return res.status(400).json({Message:err.message})
+    return res.status(500).json({Message:err.message})
     }
 
 }
@@ -115,7 +115,7 @@ exports.login = async(req,res)=>{
 
     }
     catch(err){
-        return res.status(400).json({message:err.message});
+        return res.status(500).json({message:err.message});
     }    
 }
 

@@ -1,4 +1,4 @@
-const SampleModel = require('../Model/usermodel');
+const SampleModel = require('../Model/commentsmodel');
 
 exports.create = async(req,res,next)=>{
     try
@@ -8,7 +8,7 @@ exports.create = async(req,res,next)=>{
     const Doc = new SampleModel({poll_id,user_id,reply_msg,likers,replies});
     await Doc.save();
     
-    return res.status(201).json({Message:"Document created successfully",data:Doc})
+    return res.status(201).json({Message:"Commented",data:Doc})
     }
     catch(err)
     {
@@ -45,7 +45,7 @@ exports.update = async (req,res,next)=>{
             return res.status(400).json({error:'Record not found'});
         }
         
-        res.status(200).json({message:"Record Updated Successfully", data : updatedRecord})
+        res.status(200).json({message:"Comments Updated Successfully", data : updatedRecord})
         
     }
     catch(err){
@@ -71,7 +71,7 @@ exports.remove = async(req,res)=>{
     const {id} = req.params;
 
     const data = await SampleModel.findByIdAndDelete(id);
-    return res.status(200).json({Message:"Document deleted successfully"});       
+    return res.status(200).json({Message:"Comments deleted successfully"});       
 
     }
     catch(err){
